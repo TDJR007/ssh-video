@@ -268,4 +268,10 @@ scp user1@host1:/path/file.txt user2@host2:/path/
 
 ---
 
-This completes your README section sequence from SSH connection through system monitoring to secure file transfer!
+## Part of the UnitOfWork series
+
+[@UnitOfWork-y1j](https://youtube.com/@UnitOfWork-y1j)
+
+---
+
+Special Thanks to Claude, Gemini and Deepseek.
