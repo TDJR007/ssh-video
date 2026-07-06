@@ -1,0 +1,31 @@
+services:
+  ubuntu-vm:
+    build:
+      context: .
+      dockerfile: ubuntu.Dockerfile
+    container_name: ubuntu-vm
+    hostname: ubuntu-vm
+    ports:
+      - "2223:22"
+    networks:
+      demo-net:
+        ipv4_address: 10.10.0.2
+
+  debian-vm:
+    build:
+      context: .
+      dockerfile: debian.Dockerfile
+    container_name: debian-vm
+    hostname: debian-vm
+    ports:
+      - "2222:22"
+    networks:
+      demo-net:
+        ipv4_address: 10.10.0.3
+
+networks:
+  demo-net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.10.0.0/24
